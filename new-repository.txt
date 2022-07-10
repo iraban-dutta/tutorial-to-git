@@ -1,0 +1,30 @@
+# Locally creating a new repo and linking it to a new remote repo:
+
+1-In desired location of your computer create a directory
+2-Descend into that directory
+3-Run cmd: git init
+4-You will observe that .git folder gets created in the directory (It is a git directory!)
+5-Go to GitHub and create a new repo
+    5.1-Name the repo same as your local git directory (Not mandatory but good practice!)
+6-Connect local directory (local machine) to remote directory (GitHub)
+    6.1-Run cmd: git remote add origin <url of GitHub repo>
+    6.2-Format of cmd: git remote add <key for url of GitHub repo> <url of GitHub repo>
+    6.3-By convention all repo created by an user in their GitHub account has origin as their key
+7-Push changes in local directory to remote directory
+    7.1-Run cmd: git push origin main
+    7.2-Format of cmd: git push <which url to push to> <which branch to push to>
+
+
+# Creating a new remote repo and cloning it to local machine:
+1-Go to GitHub and create a new repo
+2-Cloning a GitHub repo to local machine
+    2.1-Navigate to the place in local machine where remote repo will get cloned
+    2.2-Run cmd: git clone <url of GitHub repo>
+    2.3-For cloning: http or ssh can be used
+3-After cloning, cloned repo (local repo) is already connected to remote repo (Github)
+    3.1-Run cmd: git remote -v (shows the url of the GitHub repo and associated key)
+    3.2-Example:
+        origin  https://github.com/irabanDutta/tutorial-to-git.git (fetch)
+        origin  https://github.com/irabanDutta/tutorial-to-git.git (push)
+    
+    

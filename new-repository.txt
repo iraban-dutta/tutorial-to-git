@@ -16,6 +16,7 @@
 
 
 # Creating a new remote repo and cloning it to local machine:
+
 1-Go to GitHub and create a new repo
 2-Cloning a GitHub repo to local machine
     2.1-Navigate to the place in local machine where remote repo will get cloned
@@ -27,4 +28,5 @@
         origin  https://github.com/irabanDutta/tutorial-to-git.git (fetch)
         origin  https://github.com/irabanDutta/tutorial-to-git.git (push)
     
-    
+
+

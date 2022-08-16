@@ -1,0 +1,39 @@
+Visit url: 
+#1-https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
+
+1-git remote add <key for url of GitHub repo> <url of GitHub repo>
+    1.1-To connect local directory (local machine) to remote directory (GitHub)
+    1.2-Remote repo is identifiable by an url. We will assign a key (ex: "origin") to refer to that url.
+    1.3-By convention, all repo created by an user in their GitHub account has "origin" as their key.
+    1.4-By convention, all repo (on some other GitHub A/C) forked by an user (into their own GitHub account) 
+        has "upstream" as their key. This is relevant at the time to creating a Pull Request (that is when we 
+        want our changes in some branch of the forked repo to be absorbed in the main branch of the original project).
+
+2-git remote remove origin
+    2.1-To disconnect local directory (local machine) to remote directory (GitHub)
+    2.2-Format of cmd: git remote remove <key for url of GitHub repo>
+
+3-git remote rename <old-name> <new-name>
+
+4-git push origin main
+    4.1-Pushes the current commit history of the local repo to remote repo
+    4.2-The remote repo is origin and the branch is main
+    4.3-Format of cmd: git push <key of url of GitHub repo> <branch-name>
+
+5-git fetch <key for url of GitHub repo>
+    5.1-This command fetches all the data from the above mentioned remote repo (whose key has been given)
+        This means that all the data of all the branches of that particular repo is downloaded in our local repo.
+        However it does not automatically merge the data with any of our work or modify what we are currently working on.
+        We have to merge it manually into our work when we are ready.
+    5.2-Suppose we fetched from upstream and we want our local main branch to track the upstream main branch.
+        In such case, we set HEAD pointer to main and run: git merge upstream/main.
+    5.3-Suppose we fetched from origin and we want our local main branch to track the origin main branch.
+        5.3.1-How can origin repo change?
+              This situation can arise when the origin repo (on GitHub) has been modified from the time time we cloned 
+              or the time we last fetched it. We can ourselves make a few online commits or some third part can also 
+              contribute to our origin repo. Hence there is a possibility of it changing.
+    5.4-In such case, we set HEAD pointer to main and run: git merge origin/main.
+
+6-git pull <key for url of GitHub repo> <branch-name> (Set our HEAD pointer to the correct branch before running this cmd)
+    6.1-This cmd is particularly useful when we want our current branch to track a remote branch.
+    6.2-This cmd will automatically fetch and then merge remote branch to current branch.

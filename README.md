@@ -1,4 +1,4 @@
-# Starting with git and Github
+# Starting with git and GitHub
 Creating a readme file  
 .md stands for Markdown
 

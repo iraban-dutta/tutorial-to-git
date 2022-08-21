@@ -1,0 +1,38 @@
+Visit url:
+#1-https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
+#2-https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+
+1-git branch
+    1.1-Displays all the branches and shows the current branch
+
+2-git branch <branch-name>
+    2.1-Creates a new branch with name = <branch-name> but pointer (HEAD) is not on the 
+        newly created branch.
+    2.2-All future commits will be on the current branch (branch on which HEAD is pointing) 
+        and not on the new branch.
+
+3-git checkout <branch-name>
+    3.1-Moves pointer (HEAD) to <branch-name>. This is called checking out the branch.
+    3.2-For example: git checkout newFeature1 means HEAD pointer moves to branch "newFeature1". 
+        We say that we checkout newFeature1.
+
+4-git checkout -b <branch-name>
+    4.1-Creates a new branch with name = <branch-name> and moves pointer (HEAD) to the newly 
+        created branch.
+    4.2-All future commits will be on the new branch.
+
+5-git merge <branch-name>
+    5.1-Merges <branch-name> with current branch (that is the branch pointed by HEAD pointer)
+    5.2-When we merge, it shows up as a seperate commit
+
+6-git branch -d <branch-name>
+    6.1-Deletes <branch-name> branch 
+
+
+Expand on 3 merge scenarios:
+fast-forward
+merge-commit
+merge-conflict
+
+
+

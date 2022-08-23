@@ -19,7 +19,7 @@
     4.4-Always put a meaningful commit message.
         In Terminal message: git commit -m "Message heading" -m "Message body"
         Text Editor message: git commit (Press Enter) -> Text editor opens up -> Type message and close editor
-    4.5-Run cmd: git commit -amend (To change the last commit message)
+    4.5-Run cmd: git commit --amend (To change the last commit message)
         4.5.1-Text editor opens up -> we update commit message ans save it -> close editor -> after closing editor, 
             commit message gets updated.
 

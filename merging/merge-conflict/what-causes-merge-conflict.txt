@@ -1,0 +1,28 @@
+1-Merge conflict happens when all of the below points occur:
+    1.1-There are 2 branchs and we are trying to merge them
+    1.2-The same part of the same file has been modified differently in the two branches.
+
+2-Example: Let us say we are merging 2 branches-> main and issue.
+    2.1-Branch main->file-A.txt:
+        2.1.1-m1->m2-m3
+
+    2.2-New branch issue is created. Branch issue->file-A.txt:
+        2.2.1-m1->m2-m3->M-FOUR
+    2.3-Branch main->file-A.txt:
+        2.3.1-m1->m2-m3-m4
+    
+    2.4-Now we try to merge the branches main and issue. Here we will get a merge conflict!
+        2.4.1-This is because the same part of the same file (file-A.txt) has been modified differently 
+              in the two branches.
+        2.4.2-On branch main: m4 // On branch issue: M-FOUR
+        2.4.3-Git will get confused as to which version should it save.
+
+    2.5-To resolve merge conflict:
+        2.5.1-Make changes to the concerned file such that there are no such conflicts when merging.
+        2.5.2-After the changes are made, stage the file (by running git add file-A.txt)
+        2.5.3-Run cmd:
+                git commit -m "Message heading" -m "Message body" ----OR----
+                git commit (Press Enter) -> Text editor opens up -> Type message and close editor
+    
+
+
